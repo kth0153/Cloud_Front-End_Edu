@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 성적계산(국,영,수)
+        function cmdCal(kor,eng,mat){
+            var tot = kor+eng+mat;
+            var Avg = tot/3;
+            return Avg; // 함수를 호출한 곳을 데이터 전송함.
+        }
+
+        // 판별함수(평균 매개변수 필요)
+        // step-2
+        function ctrFun(avg){
+            var Avg = 0;
+
+            if(!avg){ // avg == undefind ==> ! undefind ==> true
+               Avg = cmdCal(70,80,90); // 성적계산 함수 호출
+               
+               if(Avg>=80){ // 평균이 80 이상인 경우
+                console.log("우수한 학생입니다.");
+                return grate(); 
+               }
+
+               if(Avg<80){ // 평균이 80 미민인 경우
+                console.log("한 학생입니다.");
+                return notGrate();
+                }
+
+            }
+
+        }
+
+        // 한 학생입니다.(80점 미만자)
+        function notGrate(){}
+       
+        // 우수한 학생입니다.(80점 이상자)
+        function grate(){}
+
+        // step-1 : 호출 : 판별함수 
+        ctrFun(); // 전달하는 매개 변수가 없기에 undefind 값 호출
+        grate();
+        notGrate();
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

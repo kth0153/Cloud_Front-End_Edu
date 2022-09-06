@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술연산자</title>
+    <script> 
+        console.log(5+3);
+        console.log(5-3);
+        console.log(5*3);
+        console.log(5/3);
+        console.log(5%3);
+
+        console.log("------------------------");
+
+        var num = 5;
+        var num2 = 3;
+        console.log(num+num2);
+        console.log(num-num2);
+        console.log(num*num2);
+        console.log(num/num2);
+        console.log(num%num2);
+
+        console.log("------------------------");
+
+        console.log(5*4/2);
+        console.log(5/4*2);
+        console.log(5/2%2);
+        console.log(5%3*2);
+
+        console.log("------------------------");
+
+        console.log(num++); // result : 출력 5 / num 6
+        console.log(++num); // result : 출력 7 / num 7
+        console.log(num--); // result : 출력 7 / num 6
+        console.log(--num); // result : 출력 5 / num 5
+
+        console.log("------------------------");
+
+        console.log(num=5); // result : 출력 5 / num 5
+        console.log(num+=5); // result : 출력 10 / num 10
+        console.log("num 값:"+num);
+        console.log(num-=2);// result : 출력 8 / num 8
+        console.log("num 값:"+num);
+        console.log(num*=3);// result : 출력 24 / num 24
+        console.log("num 값:"+num);
+        console.log(num/=2);// result : 출력 12 / num 12
+        console.log("num 값:"+num);
+        console.log(num%5);// result : 출력 2 / num 12
+        console.log("num 값:"+num);
+
+        console.log("------------------------");
+        var num = 10;
+        // 연결 연산자는 문자열과 숫자를 순서대로 나열한다.
+        console.log("홍길동은" + num + "살이다.");
+        console.log("홍길동은" + num + 5 + "살이다."); // 문자열 + 문자열 + 문자열로 처리 된다.
+        console.log(num + 10 +  "개의 사과."); // 숫자 + 숫자 = 덧셈 실행 + 문자열로 처리 된다.
+        console.log("홍길동은" + (num +5)+ "살이다."); // 문자열 + (숫자+숫자) + 문자열 => 소괄호가 가장 먼저 실행된다.
+        
+        console.log("------------------------");
+        console.log(num==10);
+        console.log(num!=10);
+        console.log(num===10);
+        console.log(num==="10");
+        console.log(num!==10);
+
+        console.log("------------------------");
+        var sum;
+        console.log(true || false || false );
+        console.log(true && false && false );
+        console.log(true &&!(true&&false));
+        console.log(sum);
+        console.log(!sum);
+
+        console.log("------------------------");
+        var kor = 80;
+        var math = 70;
+        var eng = 60;
+        console.log(kor>math && eng>kor || eng>=math); // 국어점수가 수학점수보다 크고 영어점수가 국어 점수보다 크거나 또는 영어점수가 수학점수보다 크거나 같다면 참인지 거짓인지?
+
+        console.log("------------------------");
+
+        function cmd_1(){
+            console.log("함수 선언1");
+
+        }
+
+        const cmd_2 = function(){ // 필요에 따라 사용됨 jQuery에서 많이 사용
+            var sum; // 지역변수
+            var num=5; // 지역변수
+            sum = num + 7;
+            console.log("num : " + num + ", sum : " + sum);
+        }
+
+        cmd_1(); // 함수 cmd-1 호출
+        cmd_2(); // 함수 cmd-2 호출
+    
+    
+    
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

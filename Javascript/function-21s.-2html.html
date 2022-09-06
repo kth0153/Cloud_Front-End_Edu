@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kor>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선언되지 않은 변수는 지역? 전역?</title>
+
+    <script>
+        function prtMsg(){
+            msg="전역변수는 데이터가 유지될까?"; // 전역변수 msg에 새로운 문자열 저장
+            // parent는 함수를 포함하는 또 다른 함수이거나 문서를 의미함
+            prtFun();//함수 호출
+        }
+
+        // 함수 prtFun
+        function prtFun(){
+            console.log(msg); // 전역변수 msg가 호출됨
+        }
+        prtMsg();//함수 호출
+
+        var cmd1;
+        const cmd_1 = function(n){
+            var sum;
+            sum = n +5;
+            return sum;
+        }
+
+        const cmd_2 = function(num){
+            var sum;
+            sum += num;
+            return sum;
+        }
+
+        
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
