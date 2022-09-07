@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수와 동일한 이름의 지역변수</title>
+    <script>
+        var sum=0;
+        const cmd_1 = function() {
+            var num=5;
+            var sum=10;
+            parent.sum = num + 7;
+            console.log("num : " + num + ", sum : " + sum);
+        }
+
+        const cmd_2 = function() {
+            console.log("sum : " + sum); //sum(?)
+        }
+
+        cmd_1(); //함수 cmd_1호출
+        cmd_2(); //함수 cmd_1호출
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
