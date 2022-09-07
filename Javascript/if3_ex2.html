@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if()문 형식 3의 예제</title>
+    <script>
+        /*
+            null : 최소를 선택
+            빈문자열 : 입력없이 확인
+            문자 입력 후 확인
+            숫자 입력 후 확인
+            --> 3의 배수
+            --> 3의 배수가 아닌 경우
+        */
+
+        var inData = prompt("숫자를 입력해주세요");
+        if(isNaN(inData)) console.log("문자");
+        else if(inData=="") console.log("빈문자");
+        else if(inData==null) console.log("취소");
+        else if(inData%3 == 0) console.log("3의 배수");
+        else console.log("3의 배수가 아니다.");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

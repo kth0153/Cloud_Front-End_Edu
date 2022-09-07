@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 문의 기본 구조</title>
+    <script>
+
+    console.log("--------------예제--------------------------")
+
+        for(var i =1; i<=10;i++){
+            console.log(i);
+            // break;
+            continue
+        }
+        console.log(i);
+
+            // 1부터 10까지 합을 구하시오.
+            for(var i =1; i<=10; i++){
+            var sum = 0;
+            sum += i;
+        }
+        console.log(sum);
+
+        console.log("--------------문제1--------------------------")
+
+        // 1부터 10까지 반복하되, continue를 이용해서 홀수만 출력
+        for(var i =1; i<=10; i++){
+            var sum = 0;
+
+            if(i%2==0){
+                continue;
+            }
+            console.log(i);
+
+        }
+        
+        console.log("--------------문제--------------------------")
+        // 1부터 100까지 3의 배수의 총합
+        for(var i = 1; i<=100; i++){
+            
+            if(i%3==0){
+                sum += i;
+            }
+            
+        }
+        console.log(sum);
+
+        var tot=0;
+        for(var i = 1; i<=100; i++){
+            if(i%3!=0) continue;
+            console.log(tot+=i);
+        }
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

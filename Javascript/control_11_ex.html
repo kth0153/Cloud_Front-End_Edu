@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var kor;
+        var eng;
+        var math;
+        var sex =1;
+        var name = "고태훈";
+        var msg = "";
+
+        function check(kor,eng,math){
+            var avg = (kor+eng+math)/3;
+
+            if(avg != null){
+            if(avg>=80 && sex ==1){
+                msg = "남학생 "+name+"님은 우수한 학생입니다.";
+                console.log(msg);
+            }
+            if(avg>=80 && sex ==2){
+                console.log("여학생 "+name+"님은 우수한 학생입니다.");
+            }
+         }
+        }
+
+        check(90,80,80);
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

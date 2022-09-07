@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중 for()문</title>
+
+    <style type="text/css">
+        table,th,td {
+            border:1px solid black;
+            background-color: #ffffff;
+            width: auto;
+            padding: 5px;
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        var chk =false;
+        for(i=1;i<=10;i++){
+            console.log("row : " + i);
+            for(j=1;j<=10;j++){
+                console.log("cell : " +j);
+                if(i==3){
+                    chk=true;
+                    break;
+                }
+                break;
+            }
+            if(chk) {
+                break;
+            }
+            console.log("row_end : " +i);
+        }
+
+        console.log("------------------------------------------")
+
+        for(i=1;i<=10;i++){
+            console.log("row : " + i);
+            for(j=1;j<=10;j++){
+                console.log("cell : " +j);
+                if(i==3){
+                    break;
+                }
+                break;
+            }
+            if(j==1) { // j는 1아니면 11만 된다.
+                break;
+            }
+            console.log("row_end : " +i);
+        }
+
+        console.log("--------------문제1--------------------------")
+
+        document.write("<table>");
+            document.write("<tr>");
+            for(i = 2; i<10;i++){
+                document.write("<td>" + i + " 단"+"</td>");
+            }
+            document.write("</tr>")
+        for(i = 1; i<10;i++){ // 행
+            document.write("<tr>");
+                for(j = 2;j<10;j++){ // 열
+                    document.write("<td>"+ j + "*" + i + " = " + i*j + "</td>");
+                }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+
+
+        console.log("--------------문제2--------------------------")
+
+        document.write("<table>")
+        for(i = 2; i<10;i++){
+            document.write("<tr><td>" + i + " 단 </td></tr>");
+            for(j = 1;j<10;j++){
+                // console.log(i*j + " = " + i + " * " + j);
+                document.write("<tr><td>" + i + "*" + j + " = " + i*j +"</td></tr>");
+            }
+        }
+        document.write("</table>");
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

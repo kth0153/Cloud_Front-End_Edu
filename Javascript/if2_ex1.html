@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // {} 문 없이도 사용 가능
+        var num;
+        // if(num%2==0) console.log("짝수입니다.");
+        if(0) console.log("짝수입니다.");
+        else console.log("홀수입니다.");
+
+        function check(kor,eng,mat,name,sex){
+            sum = kor+eng+mat;
+            avg = sum/3;
+
+            if(avg>=80 && sex==1){
+                console.log("남학생 "+name+"님은 성적이 우수한 학생입니다.");
+            }else if(avg<80 && sex==1){
+                console.log("남학생 "+name+"님은 성적이 저조한 학생입니다.");
+            }
+
+            if(avg>=80 && sex==2){
+                console.log("여학생 "+name+"님은 성적이 우수한 학생입니다.");
+            }else if(avg<80 && sex==2){
+                console.log("여학생 "+name+"님은 성적이 저조한 학생입니다.");
+            }
+
+
+        }
+        check(80,80,90,"김길동",1);
+
+        console.log("---------------------------------------------")
+
+        function check1(kor,eng,mat,name,sex){
+            sum = kor+eng+mat;
+            avg = sum/3;
+            msg="";
+
+        if(sex==1){
+            if(avg>=80){
+                msg="남학생 "+name+"님은 성적이 우수한 학생입니다.";
+            }
+            else{
+                msg="남학생 "+name+"님은 성적이 저조한 학생입니다.";
+            }
+        }else{
+            if(avg>=80){
+                msg="여학생 "+name+"님은 성적이 우수한 학생입니다.";
+            }
+            else{
+                msg="여학생 "+name+"님은 성적이 저조한 학생입니다.";
+            }
+
+        }
+        console.log(msg);
+
+    }
+    check1(80,80,90,"김길동",1);
+
+    console.log("---------------------------------------------")
+
+    function cmdFun(mstdName,msex,mkor,meng,mmat){
+
+        var kor = mkor;
+        var eng = meng;
+        var mat = mmat;
+        var stdName = mstdName;
+        var sex = msex;
+        var msg = "";
+        var savg=""; // 성적 결과 문자열 저장 변수
+        sum=kor+eng+mat;
+        avg = sum/3;
+
+        // 남녀 구분
+        sex = "여자";
+        if(msex==1) sex ="남자";
+        // else sex = "여자";
+
+        // 성적 메시지
+        if(avg>=80) savg="우수";
+        else svag="저조";
+
+        // 출력할 메시지 "++"
+        msg=sex + " " + stdName + "님은 성적이 우수한 학생입니다.";
+
+        console.log(msg);
+
+    }
+    cmdFun("우영우",1,0,80,70);
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

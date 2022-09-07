@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        span{
+            display: inline-block;
+            text-align: center; 
+            border:1px solid #cccccc;
+            /* background-color: #efefef; */
+            background-color: #ffffff;
+            padding: 10px;
+            width: 50px;
+            margin: 2px;
+        }
+
+        /* class => . / id => # */
+        .target {background-color: #efefef,;
+                 font-weight: bold;
+        }
+
+        p{
+            display: inline-block;
+            text-align: center;
+            border:1px solid #cccccc;
+            background-color: #efefef;
+            padding: 10px;
+            width: 50px;
+            margin: 2px;
+        }
+
+    </style>
+
+    <script>
+    
+    // document.write("<span>"+"홍길동"+"</span>"); // 한줄로 표현
+    // document.write("홍길동");
+    // document.write("이순신");
+    // document.write("김유신");
+    
+    // for(var i = 1;i<=10;i++){
+    //     document.write("<span>"+i+"</span>");
+    //     // document.write("<p>"+i+"</p>");
+    // }
+
+    // document.write("<br><br><br>");
+
+    // var sum =0;
+    //  for(var i = 1;i<=10;i++){
+        
+    //     document.write("<span>"+(sum += i)+"</span>");
+    //     // document.write("<p>"+i+"</p>");
+    // }
+
+    // document.write("<br><br><br>");
+
+    // var sum = 0;
+    // for(var i =1; i<=10;i++){
+    //     if(i == 6){
+    //         document.write("<br>");
+    //     }
+    //     document.write("<span>"+(sum += i)+"</span>");
+    // }
+
+    // var tot = 0;
+    // for(var i =1; i<=10;i++){
+    //     if(i%5==1){ // 행의 시작점
+    //         document.write("<p>");
+    //     }
+    //     document.write("<span>"+(tot += i)+"</span>");
+    //     if(i%5==0) document.write("</p>");
+    // }
+
+    var gugu=0;
+    var i =0;
+    var j =0;
+    var inData = prompt("구구단");
+    if(!isNaN(inData)){
+        document.write("<p>"+ inData + "단</p>");
+        for(var i =2;i<=9;i++){
+            if(inData == i){
+                // console.log(i+" 단");
+            for(var j=1;j<=9;j++){
+                gugu = i*j;
+                document.write("<p>"+ gugu + " = " + i + " * " + j +"</p>");
+                // console.log(gugu + " = " + i + " * " + j);
+            }
+
+            }
+        }
+    }
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
