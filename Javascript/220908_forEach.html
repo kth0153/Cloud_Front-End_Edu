@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+
+    <script>
+    var arr = ['apple','banana','kiwi','melon'];
+
+    
+    arr.forEach(function(val,idx,array){ // 값, 인덱스, 배열을 반환 여기서 배열은 의미 없음
+        console.log(val,idx,array);
+    });
+    
+    // 결과값
+    // apple 0 (4) ['apple', 'banana', 'kiwi', 'melon']
+    // banana 1 (4) ['apple', 'banana', 'kiwi', 'melon']
+    // kiwi 2 (4) ['apple', 'banana', 'kiwi', 'melon']
+    // melon 3 (4) ['apple', 'banana', 'kiwi', 'melon']
+
+    // 아래 화살표(=>) 형식으로 변환 가능
+    arr.forEach((val,idx) => console.log(val,idx)); // array는 추출하지 않음 
+    
+    // 결과값
+    // apple 0
+    // banana 1
+    // kiwi 2
+    // melon 3
+
+        for(i=0;i<arr.length;i++){
+            console.log("인덱스 " + i, "값 " + arr[i]);
+        }
+    // 결과값
+    // 인덱스 0 값 apple
+    // 인덱스 1 값 banana
+    // 인덱스 2 값 kiwi
+    // 인덱스 3 값 melon
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

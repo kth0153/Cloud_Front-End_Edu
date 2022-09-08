@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //------------------------charAt()--------------------------
+        var jumin = "123456-1bcdefg";
+        var msg = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐?";
+        // var ch = jumin.charAt(6); // 해당 인덱스 위치의 값을 하나 추출
+        // console.log(ch);
+
+        //------------------------indexOf()--------------------------
+        var num = msg.indexOf("토끼1"); // 해당 인덱스 위치 값 추출, 찾는 문자열이 몇번째 문자열인지 정수값 반환 / 시작 인덱스는 항상 0부터, 해당 문자가 없는 경우 -1 출력
+        console.log(num);
+
+        //------------------------lastIndexOf()--------------------------
+        var num1 = msg.lastIndexOf("토끼"); // 오른쪽에서 왼쪽으로 찾는 문자열이 몇번째 문자열인지 정수값 반환
+        console.log(num1);
+
+        //------------------------substring()--------------------------
+        var str = jumin.substring(7); // 문자열 추출, 뒤에 작성되는 인덱스 번호 -1 까지 추출, 뒤에 번호가 입력되지 않으면 앞에 번호 뒤 모든 값 출력
+        console.log(str);
+
+        var str1 = jumin.substr(1,3); // 
+        console.log(str1);
+
+        console.log(jumin.substr(0,2)  + " 년 " + jumin.substring(2,4) + " 월 " + jumin.substring(4,6) +" 일");
+
+        var year =jumin.substr(0,2);
+        var month =jumin.substr(2,2);
+        var day =jumin.substr(4,2);
+        var sex =jumin.substr(7,1);
+
+        if(sex<=2){
+            year = "19"+year;
+        }else{
+            year = "20"+year;
+        }
+        console.log(year + "년 " + month + "월 " + day + "일");
+
+        //------------------------replace()--------------------------
+
+        //  var prtMsg = msg.replace("토끼","거북이"); // 찾을 문자열, 변경할 문자열 => 하나의 문자열만 변경됨
+        //  console.log(prtMsg);
+        
+        //--------------------------replaceAll() 만들기 문제------------------------------
+        console.log(msg);
+        // var prtMst = msg;
+
+        function replaceAll(msg,value,replaceValue){
+            var prtMsg = msg;
+         for(;;){
+
+            prtMsg = prtMsg.replace(value,replaceValue);
+            if(prtMsg.indexOf(value) == -1){ // 해당 변경될 인덱스의 값이 없는 경우 for문 종료(모든 값이 변경 되었음을 나타냄) 
+                return prtMsg;
+                break;
+            }
+         }
+        }
+        //  console.log(prtMst);
+
+        var message = replaceAll(msg,"토끼","거북이"); // 함수내 무조건 리턴값이 있어야함
+        console.log(message);
+
+        //--------------------------replaceAll() 만들기 풀이------------------------------
+        function replaceAll_1(m,s,r){
+            var prtMsg_1 = m;
+            var strSearch = s;
+            var strReplace = r;
+         for(;;){
+
+            prtMsg_1 = prtMsg_1.replace(strSearch,strReplace);
+            if(prtMsg_1.indexOf(strSearch) == -1){ // 해당 변경될 인덱스의 값이 없는 경우 for문 종료(모든 값이 변경 되었음을 나타냄) 
+                break;
+            }
+        }
+            return prtMsg_1;
+        }
+        //  console.log(prtMst);
+
+        var message = replaceAll_1(msg,"토끼","거북이"); // 함수내 무조건 리턴값이 있어야함
+        console.log(message);
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

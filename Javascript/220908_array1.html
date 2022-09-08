@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var arr = ['사과','토마토','귤','메론','수박'];
+        //-------------------- pop() ----------------------------//
+        console.log(arr.length);
+        arr.pop(); // 마지막 배열 내용 삭제
+        console.log(arr[4]); // undefined
+        console.log(arr.length);
+
+
+        //-------------------- push() ----------------------------//
+        arr.push("바나나"); // 마지막 배열 내용 추가
+        console.log(arr);
+        arr.push("자두","포도");
+        console.log(arr);
+        arr.push("복숭아","딸기","망고");
+        console.log(arr);
+
+
+        //------------------------------문제-----------------------------
+        // while(true){
+        //     // 프롬프트를 통해 과일을 입력받는다.
+        //     // 입력값이 있으면 순차적으로 배열에 저장한다.
+        //     // 취소를 선택했을 경우에 종료한다.
+        //     // 마지막에 입력된 모든 과일을 역순으로 출력한다.
+        //     var inData = prompt("과일을 입력해 주세요");
+        //     if(inData != null && inData != ""){
+        //         arr.push(inData);
+        //         for(var i =arr.length-1;i>=0;i--){
+        //             console.log(arr[i]);
+                    
+        //         }
+        //     }else if(inData == ""){
+        //         console.log("과일을 입력해 주세요");
+        //     }else {
+        //         console.log("취소 -> 종료 합니다.")
+        //         break;
+        //     }
+            
+        // }
+
+        //------------------------------문제 풀이-----------------------------
+        var str = "";
+        // while(true){
+        //     // 입력값이 있으면 순차적으로 배열에 저장한다.
+        //     str = prompt("과일을 입력해 주세요.");
+        //     if(str!=null){
+        //         // 확인을 선택한 경우
+        //         if(str==""){
+        //             // 입력없이 확인
+        //             alert("과일이름을 입력해야 합니다.");
+        //         }else{
+        //             arr2.push(str);
+        //         }
+
+        //     }else{
+        //         // 취소를 선택했을 경우엔 종료한다.
+        //         alert("사옹자가 입력을 취소 했습니다.");
+        //         break;
+        //     }
+        // }
+        // 마지막에 입력된 모든 과일을 역순으로 출력한다.
+
+        var check = true;
+        do {
+            str = prompt("과일을 입력해 주세요.");
+            if(str!=null){
+                // 확인을 선택한 경우
+                if(str==""){
+                    // 입력없이 확인
+                    alert("과일이름을 입력해야 합니다.");
+                }else{
+                    arr.push(str);
+                }
+
+            }else{
+                // 취소를 선택했을 경우엔 종료한다.
+                alert("사옹자가 입력을 취소 했습니다.");
+                check = false; // break문 대신 사용
+            }
+
+        } while (check);
+        for(i=arr.length-1; i>=0 ; i--){
+            console.log( "index : " + i, "value :" + arr[i]);
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
