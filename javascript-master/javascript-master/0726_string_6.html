@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method : split()</title>
+    <script>
+        /* #####################################################
+            [ 형식 ]
+            Array str.split([string])
+        ================================================
+            - 설명 : str을 지정된 string를 기준으로 배열화 함
+            - string : 기준 문자열
+            - return : Array
+        ###################################################### */
+        var str = "메론, 수박, 자두, 포도, 자몽, 사과, 복숭아";
+        var arr = str.split(", "); 
+        console.log(arr);
+        //------------------- 참고 : String arr.join() -----------------------------------
+        str = arr.join("|");
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

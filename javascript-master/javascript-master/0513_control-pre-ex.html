@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if()문  3자율실습과제</title>
+    <script>
+        var userNum = prompt("숫자를 입력하세요.");
+
+        if(userNum!==null) {
+            if(isNaN(userNum)) {
+                console.log("문자가 입력되었습니다.");
+            }
+            else {
+                if(userNum=="") {
+                    console.log("입력 값이 없습니다.");
+                }
+                else if(userNum%3 == 0) {
+                    console.log("3의 배수입니다.");
+                }
+                else {
+                    console.log("3의 배수가 아닙니다.");
+                }
+            }
+        }
+        else {
+            console.log("숫자 입력이 취소되었습니다.");
+        }
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

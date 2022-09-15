@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for()문 응용예제 다중반복문</title>
+    <style type="text/css">
+        th,td {
+            padding:5px; width:100px; text-align:center;
+            border:1px solid #cccccc ; margin:1px;background-color:#ffffff;
+        }
+        th {background-color:#efefef;}
+    </style>
+    <script>
+        document.write("<table>");
+        for(i=2;i<10;i++) {
+            document.write("<tr>");
+            document.write("<th>"+i+"단</th>");
+            for(j=1;j<10;j++)  document.write("<td>"+i+" X "+j+" = "+(i*j)+"</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

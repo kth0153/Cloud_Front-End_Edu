@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="20220913_board.js"></script>
+
+    <style type="text/css">
+        table { border-collapse: collapse;};
+        table td { border: 1px solid #ccc;};
+        table th { border: 1px solid #ccc; background-color: #efefef;};
+    </style>
+
+
+</head>
+<body>
+    <div id = "fnWrite">
+    <form name="fn" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th>이름</th>
+                <td><input type="text" name="tname" id="tname"/></td>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <td><input type="text" name="ttitle" id="ttitle"/></td>
+            </tr>
+            <tr>
+                <th>작성일</th>
+                <td><input type="text" name="tdate" id="tdate" readonly/></td>
+            </tr>
+            <tr>
+                <th>조회수</th>
+                <td><input type="text" name="thit" id="thit" readonly/></td>
+            </tr>
+            <tr>
+                <th>admin</th>
+                <td><span>d</span> | <span>e</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="저장" id="btnSubmit"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <div id = "viewList">
+        <table></table>
+    </div>
+    
+</body>
+</html>

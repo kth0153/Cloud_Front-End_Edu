@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수</title>
+    <script>
+        // 전역변수를 사용하지 않는다.
+        // 함수 호출시 국어, 영어, 수학 점수를 함께 보낸다.
+        //국,영,수 평균을 함수에서 구하고
+        // 평균의 출력은 함수를 호출한 곳에서 한다.
+        //아래 코드 중 "출력"은 별도의 함수에서 출력이 되게.
+        const cmdFun = function(kor, eng, mat) {
+            var mKor=kor;
+            var mEng=eng;
+            var mMat=mat;
+            var sum = mKor + mEng + mMat;
+            var avg = sum/3;
+            return avg;
+        }
+        const cmdPrt = function() {
+            var Result = cmdFun(90,80,70);
+            console.log(Result);
+        }
+        cmdPrt();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

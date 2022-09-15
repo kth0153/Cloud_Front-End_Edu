@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력</title>
+    <style type="text/css">
+        table {
+            text-align: center;
+            border-collapse: collapse;
+            width: 100%;
+            height: 100%;
+        }
+        table * {
+            border: 1px solid black;
+        }
+
+        .notEq {
+            color: #ccc;
+        }
+
+    </style>
+    <script>
+
+        //-------------------오늘(현재)--------------------------
+        var nowDate = new Date(); // 현재의 날짜 및 시간  
+        var nowYear = nowDate.getFullYear(); // 년
+        var nowMonth = nowDate.getMonth(); // 월 1월=0, 12월=11
+        var nowDay = nowDate.getDate(); // 일 일요일=0, 토요일=6
+
+        //-------------------이전달--------------------------
+        var prevDate = new Date(nowYear, nowMonth-1, 1); // 이전달 1일
+        var prevMonth = prevDate.getMonth(); // 이전 달 값 반환
+        console.log(prevMonth);
+
+        //-------------------다음달--------------------------
+        var nextDate = new Date(nowYear,nowMonth+1,1); // 다음달 1일
+        var nextMonth = nextDate.getMonth(); // 다음 달 값 반환
+        console.log(nextMonth);
+
+        //-------------------이번달 1일--------------------------
+        nowDate = new Date(nowYear,nowMonth,1);
+        var weekNum = nowDate.getDay();
+        console.log(weekNum);
+
+        var day = 1 - weekNum; // 1-4=-3 / 1-2=-1 
+        document.write("<table border=1>");
+        var prtMonth = nowMonth;
+         while(prtMonth<nextMonth){ // row
+            document.write("<tr>");
+            for(i=0;i<7;i++){ // 일~토 까지 1주
+                prtDate = new Date(nowYear,nowMonth,day);
+                prtMonth = prtDate.getMonth(); // 캘린더에 출력해줄 날짜 객체의 월 반환
+                if(nowMonth==prtMonth){ // 이전 및 다음달 이면(이번달이 아니라면)
+                    document.write("<td>"+prtDate.getDate()+"</td>");
+                }else{
+                    // document.write("<td>&nbsp;</td>");
+                    document.write("<td class='notEq'>"+prtDate.getDate()+"</td>"); // 이전달 다음달 값 출력
+                }
+                day++;
+            } // e:while()
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

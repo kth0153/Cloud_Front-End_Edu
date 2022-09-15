@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 구성을 위한 기본 코딩</title>
+
+    <style type="text/css">
+        header, aside, section, footer {
+            border: 1px solid black;
+            margin: 2px; /*위 아래 왼쪽 오른쪽 순서*/
+           
+        }
+        aside{ /*div 2번 영역*/
+            margin-top: 0px; width: 100px; height: 100px;
+        }
+        section{ /*div 2번 영역*/
+            background: yellow;
+            margin: 0px 106px;
+        }
+        .fl{float: left} /*내용에 따라 너비가 조절됨*/
+        .fr{float: right;}
+        .fn{float: none;}
+
+        .cl{clear: left;}
+        .cr{clear: right;}
+        .cb{clear: both;}
+
+        #container {width: 50%; margin: 0% auto; min-width: 500px;}
+        /* #d1{width: 200px;} */
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <header id="d0">0</header>
+        <aside id="d1" class="fl">1</aside>
+        <aside id="d2" class="fr">2</aside>
+        <section id="d3">
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+            <p>홍길동</p>
+        </section>
+        <footer id="d4" class="cb">4</footer>
+    </div>
+</body>
+</html>

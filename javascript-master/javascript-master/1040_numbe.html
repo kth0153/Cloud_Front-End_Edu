@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진법의 표현</title>
+    <script>
+        var Num1 = Number.parseFloat("12.34");      // 12.34
+        var Num2 = Number.parseInt(12.34); //12
+        var Num3 = Number.isNaN("abc"); //false
+        var Num5 = Number.isFinite(undefined); //false
+        var Num6 = Number.isInteger("12.34"); //false , 정수인 경우에만 true
+        var Num7 = Number.isSafeInteger("12.34"); //false
+        
+        // 실제 개발에 있어 전역변수의 사용이 더 많이 쓰임
+        // 데이터를 강제적으로 숫자로 변경하여 사용하게 됨.
+        var num1 = parseFloat("12.34");      // 12.34
+        var num2 = parseInt(12.34); //12
+        var num3 = isNaN("abc"); //false
+        var num5 = isFinite(undefined); //false
+        var num6 = isInteger("12.34"); //false , 정수인 경우에만 true
+        var num7 = isSafeInteger("12.34"); //false
+        
+        console.log(Num1, Num2, Num3, Num4, Num5, Num6, Num7);
+        console.log(num1, num2, num3, num4, num5, num6, num7);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script>
+
+    var nowDate = new Date(2022,9,13,13,30); // 현재의 날짜 및 시간
+    // var nowYear = nowDate.getFullYear();
+    console.log("년 : " + nowDate.getFullYear()); // 년
+    console.log("월 : " +nowDate.getMonth()); // 월
+    console.log("일 : " +nowDate.getDate()); // 일
+    console.log("시 : " +nowDate.getHours()); // 시
+    console.log("분 : " +nowDate.getMinutes()); // 분
+    console.log("초 : " +nowDate.getSeconds()); // 초
+    // console.log("1000분의 1초 : " +nowDate.getMilliseconds()); // 1000분의 1초
+
+    switch (nowDate.getDay()) {
+            case 0:console.log("일요일");
+            break;
+            case 1:console.log("월요일");
+            break;
+            case 2:console.log("화요일");
+            break;
+            case 3:console.log("수요일");
+            break;
+            case 4:console.log("목요일");
+            break;
+            case 5:console.log("금요일");
+            break;
+            case 6:console.log("토요일");
+            break;
+    }
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

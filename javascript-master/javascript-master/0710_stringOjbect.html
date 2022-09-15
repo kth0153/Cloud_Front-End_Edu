@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체 메서드</title>
+    <script>
+        var strKor = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐?";
+        var strEng = "Hare rabbit, where are you going? Where are you going while running?";
+        var idx, str;
+        /* #################################################
+            문자열에서 지정된 위치에 있는 문자 반환 :  문자나 문자 코드를 반환합니다.
+            - charAt() : 지정된 위치에 있는 문자 반혼
+            - charCodeAt() : 주어진 인덱스에 대한 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 반환
+            - charPointAt() : 주어진 인덱스에 대한 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 반환
+            ===========================================
+            - 형식 :  char str.cahrAt(index) / int str.charCodeAt(index) / int str.charPointAt(index)
+            - str : 문자열
+            - index : 반환할 문자의 위치
+            - return : Char
+        ################################################# */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐.";
+        var result1 = str.charAt(2); // 변수 str에서 2번째 위치한 문자 반환 ==> 끼
+        var result2 = strEng.charCodeAt(2); // 변수 str에서 2번째 위치한 문자의 UTF-16 코드값 반환 ==> 끼
+        var result3 = strEng.codePointAt(2); // 변수 str에서 2번째 위치한 문자의 UTF-16 코드값 반환 ==> 끼
+        console.log(result1, result2, result3); // "끼"를 콘솔에 출력
+        /* #####################################################
+            - 형식 : str.indexOf(string))
+            - 설명 : str에서 string를 왼쪽부터 찾아 첫번째 찾은 문자열의 위치 반환
+            - str : 문자열
+            - string : 찾을 문자열
+            - return : index
+        ###################################################### */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐.";
+        var idx = str.indexOf("토끼"); // 변수 str에서 "토끼"를 찾아 위치 반환 ==> 1
+        console.log(idx); // 1을 콘솔에 출력
+        idx = str.indexOf("끼토"); // "끼토"를 찾지 못함 ==> -11
+        console.log(idx); // -1을 콘솔에 출력
+        /* #####################################################
+            - 형식 : str.lastIndexOf(string))
+            - 설명 : str에서 string를 오른쪽 부터 찾아 첫번째 찾은 문자열의 위치 반환
+            - str : 문자열
+            - string : 찾을 문자열
+            - return : index
+        ###################################################### */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐.";
+        var idx = str.lastIndexOf("토끼"); // 변수 str에서 "토끼"를 찾아 위치 반환 ==> 4
+        console.log(idx); // 4을 콘솔에 출력
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method : slice()  |  substring()  |  substr()</title>
+    <script>
+        /* #####################################################
+            String slice(int start_index, int end_index)
+            String substring(int start_index, int end_index)
+            String substr(int start_index, int length)
+            ==============================================
+            - str: 문자열
+            - start_index : 반환 할 문자열의 시작위치
+            - end_index  : end_index 이전까지의 문자열
+            - length : 문자열의 길이(개수)
+            - 반환 값: String 또는 빈 문자열
+        ###################################################### */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐";
+        var result1 = str.slice(-16, -12); // str의 17번째 문자인 “깡”부터 (21-1)번째 글자인 “총”까지 반환
+        var result2 = str.substring(17, 21); // str의 17번째 문자인 “깡”부터 (21-1)번째 글자인 “총”까지 반환
+        var result3 = str.substr(17, 4); // str의 17번째 문자인 “깡”부터 (21-1)번째 글자인 “총”까지 반환
+        console.log("a:"+result1, "b:"+result2, "c:"+result3); // "깡총깡총"을 콘솔에 출력
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if()문 형식 1 : 매개변수와 return을 활용한 성적 구하기</title>
+    <script>
+        //성적계산(국, 영, 수)
+        function cmdCa(kor, eng, mat) {
+            var tot = kor + eng + mat;
+            var Avg = tot / 3;
+            return Avg;//함수를 호출한 곳으로 데이터 전송함.    
+        }
+        //판별함수(평균 매개변수 필요)
+        //step-2
+        function ctrFun(avg){
+            var Avg=0;
+            if(!avg) {//avg=undefinde ==> ! undefinde ==> true
+                Avg=cmdCa(70,  70,  90);//성적계산함수 호출
+                if(Avg>=80) {//평균이 80이상인 경우
+                    prtMsg2();//출력함수 호출
+                }
+
+                if(Avg<80) {//평균이 80미만인 경우
+                    prtMsg1();//출력함수 호출
+                }
+            }
+        }
+        //한 학생입니다.(80점 미만자)
+        function prtMsg1() {
+            console.log("한 학생입니다.");
+        }
+        //우수한 학생입니다.(80점 이상자)
+        function prtMsg2() {
+            console.log("우수한 학생입니다.");
+        }
+        //step-1 : 호출 : 판별함수
+        ctrFun();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

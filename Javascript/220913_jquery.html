@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery.js load</title>
+
+    <style type="text/css">
+        /* id는 하나만 사용 중복 불가(#id)
+        class는 여러개 사용 가능(.class) */
+
+        div { border: 1px solid black; padding: 10px; }
+        .div2 { background-color: blue;}
+
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        // 현재 문서가 로딩 되었을경우
+        $().ready(function text() { //jQuery 코딩 준비
+            var html = $(".div2").text(); // class명이 .div2를 출력
+            var html = $("div.div2").text(); // div테그 안의 class명 .div2를 출력
+            $("p[class='div2']").text("홍길동"); // p 테그의 div2 class명을 가진 내용 변경
+           
+            // alert(html);
+        });
+
+        $().ready(function css() {
+            var html = $("#d2").css({"background-color":"yellow"}); // css({"속성" : "값"})
+            $("div span").css({"font-size":"30px"});
+            $("div:eq(1)").css({"font-size":"100px"}); // :eq(n) 선택한 요소 중에서 인덱스 n번째 선택 - 0,1,2 ... n 으로 설정
+            // $("div:odd").css({"font-size":"100px"}); // 선택한 요소 중에서 인덱스가 홀수인 요소를 모두 선택
+            // $("div:even").css({"font-size":"100px"}); // 선택한 요소 중에서 인덱스가 짝수 요소를 모두 선택
+            // $("div:gt(n)").css({"font-size":"100px"}); // 선택한 요소 중에서 인덱스가 n보다 큰 요소를 모두 선택
+            $("div:first").css({"font-size":"50px"}); // div의 첫 번째 변경
+        });
+
+    </script>
+</head>
+<body>
+    <div id="d2">A</div>
+    <div class="div2">B</div>
+    <div>
+        <span>홍길동</span>
+    </div>
+    <p class="div2">D</p>
+
+    
+</body>
+</html>

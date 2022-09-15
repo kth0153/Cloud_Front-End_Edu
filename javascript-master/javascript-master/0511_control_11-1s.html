@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if()문 형식 1 : 성적구하기</title>
+    <script>
+        var kor=80;
+        var eng=70;
+        var mat=0;
+        var tot, avg;//국영수 점수의 합산 및 평균을 저장할 전역변수
+        var msg=""; //var msg;
+        
+        tot = kor + eng + mat;
+        avg = tot/3;        
+        if(avg>=80) {
+            //우수 출력
+            msg="우수";
+        }
+        console.log(msg + "한 학생입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

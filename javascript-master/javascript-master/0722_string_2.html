@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method : indexOf()</title>
+    <script>
+        /* #####################################################
+            - 형식 : int str.indexOf(string))  |  int str.lastIndexOf(string)
+            - 설명 : str에서 string를 왼쪽부터 찾아 첫번째 찾은 문자열의 위치 반환
+                    찾지 못한 경우엔 -1 을 반환함.
+            - str : 문자열
+            - string : 찾을 문자열
+            - return : int
+        ###################################################### */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐.";
+        var idx1 = str.indexOf("토끼"); // 변수 str에서 "토끼"를 찾아 위치 반환 ==> 1
+        var idx2 = str.lastIndexOf("토끼"); // 변수 str에서 "토끼"를 찾아 위치 반환 ==> 4
+
+        console.log(idx1, idx2); // 1을 콘솔에 출력
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

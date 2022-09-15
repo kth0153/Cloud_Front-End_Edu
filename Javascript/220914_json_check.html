@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json 기본</title>
+
+    <script>
+        // var keyname = ["num","name","ph"]; // 기본형식 배열로 저장
+        // var jsonData = {
+        //     // json 기본 형식
+        //     "num" : 1,
+        //     "name" : "basicname",
+        //     "ph" : "010-0000-0000",
+
+        //     "num2" : 2,
+        //     "name2" : "basicname2",
+        //     "ph2" : "010-1234-1222"
+
+        // }
+        
+        // //-------------- 기본 형식 출력-----------------------------
+        // var name = jsonData["name"]; // 변수에 저장 가능
+        // console.log(jsonData.num, name, jsonData["ph"]);// json데이터.속성값으로 출력, 변수에 값 저장해서 출력, json데이터 배열에 속성 값 넣어서 출력
+        
+        // for(var i=0;i<keyname.length;i++){
+        //     console.log(jsonData[keyname[i]]);
+        // }
+
+        // //----------------------json 사용법1-------------------------------
+        // var jsonData1 = {
+        //     "list1" : [1, "홍길동2", "010-1234-1234"], // 기본 형식을 배열 형식으로 저장
+        //     "list2" : [2, "김길동2", "020-1324-1444"],
+        //     "list3" : [3, "이길동2", "030-1234-1234"]     
+        // }
+        // console.log(jsonData1.list1[0]); //list1의 0번째 인덱스 1 출력
+        // console.log(jsonData1.list1[1]); //list1의 1번째 인덱스 "홍길동" 출력
+        // console.log(jsonData1.list1[2]); //list1의 2번째 인덱스 "010-1234-1234" 출력
+
+        // for(var i=0; i<3;i++){
+        //     console.log(jsonData1.list1[i]);
+        // }
+
+        var keyName1 = ["list","list2","list3"];
+        var jsonData2 = [
+            {"list" : 1, "name" : "홍길동3", "ph":"010-1234-1234"},
+            {"list2" : 2, "name" : "김길동3", "ph":"011-1234-1234"},
+            {"list3" : 3, "name" : "감길동3", "ph":"016-1234-1234"}
+        ]
+
+        for(var i =0;i<=jsonData2.length-1;i++){
+            keyName1 = jsonData2[i];
+            console.log(keyName1);
+        }
+
+        // console.log(jsonData2[0],jsonData2[0].name);
+
+        
+
+
+        
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

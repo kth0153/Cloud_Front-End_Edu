@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        var nowDate = new Date();
+        var nowYear = nowDate.getFullYear();
+        var nowMonth = nowDate.getMonth();
+        var nowDay = nowDate.getDate();
+
+        var preDate = new Date(nowYear,nowMonth-1,1);
+        var preMonth = preDate.getMonth()
+
+        var nextDate = new Date(nowYear,nowMonth+1,1);
+        var nextDate = nextDate.getMonth();
+
+        var nowDate = new date(nowYear, nowMonth, 1);
+        var weekNum = nowDate.getday();
+
+        $("#calendar").ready(function() {
+
+        var $table = $("#calendar table");
+        var $trstart = $("<tr>");
+        var $trend = $("</tr>");
+        var $tr = $trstart + $trend;
+        var $td = $("<td></td>");
+
+        var day = 1 - weekNum;
+        var prtMonth = nowMonth;
+         while(prtMonth<nextMonth){ // row
+            $table.append($trstart);
+            for(i=0;i<7;i++){ // 일~토 까지 1주
+                prtDate = new Date(nowYear,nowMonth,day);
+                prtMonth = prtDate.getMonth(); // 캘린더에 출력해줄 날짜 객체의 월 반환
+                if(nowMonth==prtMonth){ // 이전 및 다음달 이면(이번달이 아니라면)
+                    $td.append(prtDate.getDate());
+                }else{
+                    // document.write("<td>&nbsp;</td>");
+                    $td.append(prtDate.getDate());
+                }
+                day++;
+                $table.append($trend);
+            } // e:while()
+            
+        }
+            $tr.append($td);
+            $table.append($tr);
+        });
+
+        
+
+    </script>
+</head>
+<body>
+    <div id="calendar">
+        <table></table>
+    </div>
+</body>
+</html>

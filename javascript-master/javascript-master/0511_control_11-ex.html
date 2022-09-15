@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if()문 1형식 자율학습예제</title>
+    <script>
+        var sum=0;
+        var kor=70; 
+        var eng=80; 
+        var mat=90;
+        var sex = 1;//남자
+        var stdName = "우영우";
+        var msg="";
+        sum=kor + eng + mat;
+        avg = sum/3;
+        //평균이 80점 이상이면 우수
+        if(avg>=80 && sex==1) {
+            msg="남학생 " + stdName + "는 성적이 우수한 학생입니다.";
+            console.log(msg);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

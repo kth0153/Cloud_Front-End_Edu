@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if()문 형식3 : 응용예제</title>
+    <script>
+        function cmdFun(kor, eng, mat) {
+            var tot = kor, eng, mat;
+            var avg = tot / 3;
+            if(avg>=90) console.log("이번 성적은 '수' 입니다.");
+            else if(avg>=80) console.log("이번 성적은 '우' 입니다.");
+            else if(avg>=70) console.log("이번 성적은 '미' 입니다.");
+            else if(avg>=60) console.log("이번 성적은 '양' 입니다.");
+            else console.log("이번 성적은 '수' 입니다.");
+        }
+        cmdFun(90, 60, 50);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

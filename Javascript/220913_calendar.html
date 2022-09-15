@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var nowDate = new Date(); // 현재의 날짜 및 시간
+        var nowYear = nowDate.getFullYear(); // 년
+        var nowMonth = nowDate.getMonth(); // 월
+        var nowDay = nowDate.getDate(); // 일
+
+        // 이번달 1일이 무슨 요일인지 확인
+        var startDate = new Date(nowYear,nowMonth,1); // 년, 월, 일 의 첫번째 날
+        var weekNum = startDate.getDay();// 1일의 요일번호 추출(0 -6)
+        var prtDay = 1;
+
+        var lastDate = new Date(nowYear, nowMonth+1, 0); // 이번달의 마지막 일자
+        // console.log(nowMonth+1); // 0 : 1월
+        var lastDay = lastDate.getDate(); // 마지막 일 반환
+        document.write("<table border=1>");
+            while(prtDay<=lastDay){
+                document.write("<tr>");
+            for(i=0;i<7;i++){
+                document.write("<td>");
+                if((i<weekNum && prtDay == 1) || prtDay>lastDay)document.write("&nbsp;"); // 이전달
+                else document.write(prtDay++); // 이번달
+                document.write("</td>");
+           }
+           document.write("</tr>");
+        }
+        document.write("</table>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

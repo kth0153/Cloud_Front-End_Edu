@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        table{ border-collapse: collapse; }
+        td{ border: 1px solid black; width: 50px; height: 50px;}
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $().ready(function() {
+          
+            var $span = $("#viewArea").append("<span>홍길동</span>");
+            $span.css({"background-color":"green"});
+            $span.text("이순신");
+
+                var $table = $("#viewArea").append("<table></table>");
+                for(i=1;i<=5;i++){
+                    var $tr = $table.append("<tr></tr>");
+                    for(j=1;j<=5;j++){
+                        $tr.append("<td>&nbsp;</td>");
+                    }
+                }
+                var $table1 = $("#viewArea").append("<table></table>");
+                for(i=1;i<=5;i++){
+                    var $tr1 = $table1.append("<tr></tr>");
+                    for(j=1;j<=5;j++){
+                        $td = $("<td>&nbsp;</td>");
+                        $td.css({"background-color":"rgb(255,100,255"});
+                        $td.text("홍길동" + (i * j));
+                        $tr1.append($td);
+                    }
+                }
+
+                $("div:eq(0)").append($table);
+
+                $("td").on("click", function(ev){
+                    $(this).index();
+                    alert($(this).index());
+                });
+
+            for(var i=1;i<6;i++){
+                var $chkBox = $("<input />");
+                $chkBox.attr("name","ho");
+                $chkBox.attr("type","checkbox");
+                $chkBox.attr("checked",true);
+                $chkBox.attr("value",i);
+
+                $chkBox.on("click",function (ev) {
+                    alert($(this).attr("value"));
+                });
+
+                $("#viewArea1").append($chkBox);
+            }
+
+        });
+
+    </script>
+
+</head>
+<body>
+    <form name="fn" method="get">
+
+    <p><span>이름 : </span><input type="text" name="txtname" id="txtname" value="이름"/></p>
+    <p><span>개인정보 허용 : </span><input type="checkbox" name="txtho"/></p>
+    <p><span>예 : </span><input type="radio" value="" name="txtrdo"/></p>
+    <p><span>아니오 : </span><input type="radio" value="" name="txtrdo"/></p>
+    <p><span> <input type="button" value="확인" id="cmdButton"></input></span></p>
+    <div id="viewArea"></div>
+    <div id="viewArea1"></div>
+    </form>
+
+
+    
+</body>
+</html>

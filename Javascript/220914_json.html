@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json 기본</title>
+
+    <script>
+        // var keyName = ["num","name","hp"];
+        var keyName = ["list1","list2","list3"];
+        var jsonData = {
+            // 기본 형식 : "key" : data
+            // "num" : 1,
+            // "name" : "홍길동",
+            // "hp" : "010-9352-0736"
+
+            "list1" : [1, "홍길동", "010-1234-1234"],
+            "list2" : [2, "길길동", "010-1313-1414"],
+            "list3" : [3, "고길동", "010-1616-1561"],
+
+        }
+        console.log(jsonData.list3[1]); // list1[index number] 해당 인덱스 값 출력
+
+        // 배열에 저장한 값 저장
+        // var tel=jsonData[keyName[2]];
+
+        // jsonDate["key 값"]
+        // console.log(jsonData["num"], jsonData.name, tel);
+
+        // for(i=0;i<keyName.length;i++){
+        //    console.log(jsonData[keyName[i]]);
+        // }
+
+        var jsonData1 = [ // jsonData1 배열 역할
+            {"list" : 1, "name" : "홍길동", "ph" : "010-1234-1234", "other" : [1,2,3]}, // jsonData1[0]
+            {"list" : 2, "name" : "길길동", "ph" : "010-1313-1414"}, // jsonData1[1]
+            {"list" : 3, "name" : "고길동", "ph" : "010-1616-1561"} // jsonData1[2]
+
+        ];
+
+        console.log(jsonData1[1].name);
+        document.write("[\r\n")
+        document.write("\t{\"list\":1, \"name\":\"홍길동\", \"hp\":\"010-1234-1234\"}");
+        document.write("\t{\"list\":1, \"name\":\"홍길동\", \"hp\":\"010-1234-1234\"}");
+        document.write("\t{\"list\":1, \"name\":\"홍길동\", \"hp\":\"010-1234-1234\"}");
+        document.write("\r\n]")
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
