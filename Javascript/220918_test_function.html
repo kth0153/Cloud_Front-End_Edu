@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>함수내에서 선언되지 않은 변수의 성격 : 전역변수</title>
+    <title>Document</title>
+
     <script>
-        //var sum=0; // 전역변수 선언
-        const cmd_1 = function() {
+        //------------------------------------전역 변수와 지역 변수의 차이 확인---------------------------------------
+         //var sum=0; // 전역변수 선언
+         const cmd_1 = function() {
             // var sum;
             var num=5; // 함수내 선언으로 지역변수 역할
             sum = num + 7; // 함수내 선언 하지 않은 변수는 전역변수 역할을 할 수 있다.
@@ -28,6 +30,20 @@
         cmd_1(); //함수 cmd_1호출
         cmd_2(); //함수 cmd_1호출
         cmd_3();
+
+        //------------------------------------매개 변수 함수 사용---------------------------------------
+        const cmdFun = function (kor,eng,mat) {
+            var mKor = kor;
+            var mEng = eng;
+            var mMat = mat;
+            var avg = (mKor+mEng+mMat)/3;
+            return avg;
+        }
+
+        const cmdPrt = function () {
+            var Result = cmdFun(90,90,90);
+            console.log(Result);
+        }
     </script>
 </head>
 <body>

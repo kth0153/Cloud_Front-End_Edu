@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 리스트 : $.ajax() | JSON</title>
+    <!-- reset.css -->
+    <link href="style1.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="ajax_ex.js">
+
+    </script>
+
+</head>
+<body>
+
+    <div id="container">
+        <h1>게시판</h1>
+        <form>
+            <table>
+                <caption>게시판의 목록 출력</caption>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="chkAll" id="chkAll"/></th>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>조회수</th>
+                        <th>작성일</th>
+                        <th>admin</th>
+                    </tr>
+                </thead>
+                <tbody id="listArea">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <span id = "btnNext">목록 더보기</span>
+                            <span id="btnDel">| 선택 삭제</span>
+                        </td>
+
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+
+    </div>
+
+</body>
+</html>

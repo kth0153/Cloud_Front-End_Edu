@@ -7,8 +7,10 @@
     <title>선언되지 않은 변수는 지역? 전역?</title>
 
     <script>
+        var msg="전역 변수"
         function prtMsg(){
-            msg="전역변수는 데이터가 유지될까?"; // 전역변수 msg에 새로운 문자열 저장
+            var msg;
+            parent.msg="전역변수는 데이터가 유지될까?"; // 전역변수 msg에 새로운 문자열 저장
             // parent는 함수를 포함하는 또 다른 함수이거나 문서를 의미함
             prtFun();//함수 호출
         }

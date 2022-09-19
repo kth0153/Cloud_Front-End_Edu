@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스를 라이오처럼</title>
+    <style type="text/css">
+        form{margin:0px; padding:0px;}
+        label { margin-right:10px;}
+        #formArea {
+            width: 500px; float:left;height: 18px; 
+            padding:10px; border:1px solid #ccc;
+        }
+        #btnChk {
+            display:block; width:150px; padding:8px; margin-left:525px;;
+            border:1px solid #ccc ; background-color:#efefef; 
+            cursor: pointer; text-align: center;
+        }
+        #btnChk:hover {
+            background-color:chartreuse; border-color: darkgreen;
+            font-weight: bold;
+        }
+    </style>
+    <script src=https://code.jquery.com/jquery-3.6.1.js></script>    
+    <script src="chkBox.js"></script>
+</head>
+<body>
+    <div id="formArea"></div>
+    <span id="btnChk">취미선택 만들기</span>
+</body>
+</html>

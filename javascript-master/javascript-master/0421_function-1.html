@@ -8,15 +8,15 @@
     <script>
         var msg="전역변수와 지역변수 이해하기";//전역변수 msg에 문자열 저장
         function prtMsg() {
-            var msg;//함수 안에서 선언된 변수는 지역변소가 된다.
-            console.log(msg);//전역변수와 동일한 이름의 선언된 변수명은 지역변수로 역할을 수행한다.
+            var msg;//함수 안에서 선언된 변수는 지역변수가 된다.
+            console.log(msg);//전역변수와 동일한 이름의 선언된 변수명은 지역변수로 역할을 수행한다. // 변수 선언만 하고 초기화는 하지 않았기에 undefined 출력
             parent.msg="전역변수는 데이터가 유지될까?";//전역변수 msg에 새로운 문자열 저장
             //parent는 함수를 포함하는 또다른 함수이거나 문서를 의미함.
             prtFun();//함수호출
         }
         //함수 prtFun
         function prtFun() {
-            console.log(msg);
+            console.log(msg); // prtMsg의 지역변수 msg가 출력이 되는 것이 아닌 전역변수의 값이 변경된 전역변수는 데이터가 유지될까? 출력
         }
         prtMsg();//함수 호출(실행)
     </script>

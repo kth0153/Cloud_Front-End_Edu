@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //----------------방법 1-----------------------
+        var keyName = ["num","name","hp"];
+        var jsonDate = {
+            "num" : 1,
+            "name" : "김길",
+            "hp" : "123321312"
+        }
+        var tel = jsonDate[keyName[2]];
+        console.log(jsonDate.num,jsonDate["name"],tel);
+
+        for(i=0;i<keyName.length;i++){
+            console.log(jsonDate[keyName[i]]);
+        }
+
+        //----------------방법 2-----------------------
+        var keyName1 = ["list1,list2,list3"];
+
+        var jsonDate1 = {
+            "list1" : [1,"1","123123"],
+            "list2" : [2,"1","123123"],
+            "list3" : [3,"1","123123"]
+        }
+
+        console.log(jsonDate1.list1[0]);
+        console.log(jsonDate1.list1.length);
+
+         for(i=0;i<jsonData1.list1.length;i++){
+             console.log(jsonDate1.list1[i]);
+         }
+
+        var jsonDate2 = [
+            {}
+        ]
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

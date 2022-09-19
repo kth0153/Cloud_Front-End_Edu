@@ -37,6 +37,22 @@
             $("div:first").css({"font-size":"50px"}); // div의 첫 번째 변경
         });
 
+        $(function(){
+            $("div").css({
+                "border":"1px solid black",
+                "background": "#abcdef"
+            });
+            $("div:odd").css({"background-color":"yellow"}); // div의 홀수 번째 배경색 변경
+
+            for(i=1;i<=10;i++){
+                $chkBox=$("<input type='checkbox' name='chk' />");
+                $text=$("<span>box"+i+"</span>");
+                $chkBox.attr("value",i); // checkbox value 값 i로 변경
+                if(i==3) $chkBox.attr("checked", true); // 속성 변경
+                $("div:eq(3)").append($chkBox); 
+                $chkBox.after($text); // checkbox 뒤에 글자 추가
+            }
+        });
     </script>
 </head>
 <body>

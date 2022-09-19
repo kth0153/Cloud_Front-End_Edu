@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전역변수와 동일한 이름의 지역변수</title>
     <script>
-        var sum=0;
+        var sum=0; // 전역변수
         const cmd_1 = function() {
-            var num=5;
-            var sum=10;
-            //parent.sum = num + 7;
-            console.log("num : " + num + ", sum : " + sum);
+            var num=5; // 지역변수 num
+            var sum=10; // 지역변수 sum
+            //parent.sum = num + 7; // 전역변수 12가 출력
+            console.log("num : " + num + ", sum : " + sum); // num : 5, sum : 10
         }
 
         const cmd_2 = function() {
-            console.log("sum : " + sum); //sum(?)
+            console.log("sum : " + sum); //sum : 0
         }
 
         cmd_1(); //함수 cmd_1호출

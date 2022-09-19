@@ -12,27 +12,25 @@
         var nowMonth = nowDate.getMonth();
         var nowDay = nowDate.getDate();
 
-        var preDate = new Date(nowYear,nowMonth-1,1);
+        var preDate = new Date(nowYear,nowMonth-1,1); // 이전달
         var preMonth = preDate.getMonth()
 
-        var nextDate = new Date(nowYear,nowMonth+1,1);
+        var nextDate = new Date(nowYear,nowMonth+1,1); // 다음달
         var nextDate = nextDate.getMonth();
 
-        var nowDate = new date(nowYear, nowMonth, 1);
+        var nowDate = new date(nowYear, nowMonth, 1); // 이번달
         var weekNum = nowDate.getday();
 
         $("#calendar").ready(function() {
 
         var $table = $("#calendar table");
-        var $trstart = $("<tr>");
-        var $trend = $("</tr>");
-        var $tr = $trstart + $trend;
+        var $tr = $("<tr></tr>");
         var $td = $("<td></td>");
 
         var day = 1 - weekNum;
         var prtMonth = nowMonth;
          while(prtMonth<nextMonth){ // row
-            $table.append($trstart);
+            $table.append($tr);
             for(i=0;i<7;i++){ // 일~토 까지 1주
                 prtDate = new Date(nowYear,nowMonth,day);
                 prtMonth = prtDate.getMonth(); // 캘린더에 출력해줄 날짜 객체의 월 반환
@@ -43,11 +41,11 @@
                     $td.append(prtDate.getDate());
                 }
                 day++;
-                $table.append($trend);
+                $tr.append($td);
             } // e:while()
-            
+
         }
-            $tr.append($td);
+
             $table.append($tr);
         });
 

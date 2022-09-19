@@ -14,18 +14,19 @@
 
         // 이번달 1일이 무슨 요일인지 확인
         var startDate = new Date(nowYear,nowMonth,1); // 년, 월, 일 의 첫번째 날
-        var weekNum = startDate.getDay();// 1일의 요일번호 추출(0 -6)
+        var weekNum = startDate.getDay();// 1일의 요일번호 추출(0(일요일) -6(토요일))
         var prtDay = 1;
 
+        // console.log(nowMonth); //
         var lastDate = new Date(nowYear, nowMonth+1, 0); // 이번달의 마지막 일자
-        // console.log(nowMonth+1); // 0 : 1월
+        // console.log(nowMonth+1); // 1월(0) ~ 12월(11)
         var lastDay = lastDate.getDate(); // 마지막 일 반환
         document.write("<table border=1>");
             while(prtDay<=lastDay){
                 document.write("<tr>");
-            for(i=0;i<7;i++){
+            for(i=0;i<7;i++){ // 일주일
                 document.write("<td>");
-                if((i<weekNum && prtDay == 1) || prtDay>lastDay)document.write("&nbsp;"); // 이전달
+                if((i<weekNum && prtDay == 1) || prtDay>lastDay)document.write("&nbsp;"); // 이전달, 빈칸으로 표현
                 else document.write(prtDay++); // 이번달
                 document.write("</td>");
            }

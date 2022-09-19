@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수와 지역변수 이해하기</title>
+    <script>
+
+        var msg = "전역변수와 지역변수 이해하기";
+        function prtMgs(){
+            var msg; // 함수 안에서 선언된 변수는 지역변수가 된다.
+            console.log(msg); // 전역변수와 동일한 이름으로 선언된 변수명은 지역변수로 역할을 수행
+            parent.msg = "전역변수는 데이터가 유지될까?"; // 전역변수 msg에 새로운 문자열 저장
+            // parent는 함수를 포함하는 또다른 함수이거나 문서를 의미
+            prtFun(); // 함수호출
+        }
+
+        // 함수 prtFun
+        function prtFun(){
+            console.log(msg);
+        }
+        prtMgs(); // 함수 호출 (실행)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

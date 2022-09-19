@@ -8,19 +8,19 @@
     <script>
         // 전역변수를 사용하지 않는다.
         // 함수 호출시 국어, 영어, 수학 점수를 함께 보낸다.
-        //국,영,수 평균을 함수에서 구하고
+        // 국,영,수 평균을 함수에서 구하고
         // 평균의 출력은 함수를 호출한 곳에서 한다.
-        //아래 코드 중 "출력"은 별도의 함수에서 출력이 되게.
+        // 아래 코드 중 "출력"은 별도의 함수에서 출력이 되게.
         const cmdFun = function(kor, eng, mat) {
-            var mKor=kor;
+            var mKor=kor; // 국어 지역변수
             var mEng=eng;
             var mMat=mat;
-            var sum = mKor + mEng + mMat;
-            var avg = sum/3;
-            return avg;
+            var sum = mKor + mEng + mMat; // 합계
+            var avg = sum/3; // 평균
+            return avg; // 호출한 곳으로 평균 값 전달
         }
         const cmdPrt = function() {
-            var Result = cmdFun(90,80,70);
+            var Result = cmdFun(90,80,70); // 평균 값 가져와서 결과 저장
             console.log(Result);
         }
         cmdPrt();

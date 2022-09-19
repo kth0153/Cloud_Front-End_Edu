@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전역변수와 지역변수의 이해</title>
     <script>
-        var sum=0;
+        var sum=0; // 전역변수
         const cmd_1 = function() {
-            var num=5;
-            sum = num + 7;
-            console.log("num : " + num + ", sum : " + sum);
+            var num=5; // 지역변수
+            sum = num + 7; // 전역변수
+            console.log("num : " + num + ", sum : " + sum); // num : 5, sum : 12
         }
 
         const cmd_2 = function() {
-            console.log("sum : " + sum); //sum(?)
+            console.log("sum : " + sum); //sum : 12 => 지역변수는 함수가 끝나면 사용 하지 못하지만, 전역변수 값은 지속됨
+            // console.log(num); // num은 변수로 선언된 지역변수이기에 해당 함수내에서만 사용 가능
         }
 
         cmd_1(); //함수 cmd-1호출

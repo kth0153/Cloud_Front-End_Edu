@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중화요리 주문</title>
+    <style type="text/css">
+        span, div {
+            display:block; padding:10px; width:300px; 
+            border:1px solid #ccc ; margin-bottom:3px;
+        }
+        h3 {margin:5px; font-size:1.2rem;}
+        ol {margin:0px; padding:0px;}
+        li {margin-left:30px ;padding:5px 0px;}
+        span {
+            background-color:#efefef; 
+            cursor: pointer; text-align: center; 
+        }
+        #orderArea {height:250px;}
+        span:hover {
+            background-color:chartreuse; border-color: darkgreen;
+            font-weight: bold;
+        }
+    </style>
+    <script src=https://code.jquery.com/jquery-3.6.1.js></script> 
+    <script src="order.js"></script>
+</head>
+<body>
+        <span id="btnOrder">중화요리 주문시작</span>
+        <div>
+            <h3>Menu</h3>
+            <ol>
+                <li>자장면</li>
+                <li>짬뽕</li>
+                <li>볶음밥</li>
+            </ol>
+        </div>
+        <div id="orderArea"></div>
+</body>
+</html>

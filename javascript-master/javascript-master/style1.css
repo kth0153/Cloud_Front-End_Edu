@@ -1,0 +1,41 @@
+@import url("reset.css");
+@import url(https:cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+/* html * {
+    font-family: 'NanumSquare', sans-serif;
+    color: #222;
+} */
+#container{ /*게시판 전체 div */
+    width: 960px; /*중앙에 화면 위치 시키기 위해 너비 설정 */
+    margin: 0px auto; /*중앙에 화면 위치 */
+    border: 1px solid #ccc; /* 게시판 테두리 */
+}
+table{ /* 게시판 테이블 */
+    border-collapse: collapse; /* 테이블 선 겹침*/
+    width: 100%;
+}
+table caption{
+    visibility: hidden; /*caption 내용 숨김(공간은 가지고 있음)*/
+    position: absolute; /*공간 차지 하지 않게 위로 배치*/
+ /* position: relative; 공간 자리 차지
+    position: fixed; */
+}
+td {/*전체 td*/
+    border-bottom: 1px solid #ccc;
+}
+th, tfoot td{
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+col:nth-child(1){width: 5%;} /*col 그룹 내 인덱스*/
+col:nth-child(2){width: 5%;}
+col:nth-child(3){width: auto;}
+col:nth-child(4){width: 10%;}
+col:nth-child(5){width: 10%;}
+col:nth-child(6){width: 10%;}
+col:nth-child(7){width: 10%;}
+tfoot span:hover { /* 마우스 올렸을때 색 변화*/
+    color: #f00;
+    cursor: pointer; /*마우스 모양 변경*/
+}

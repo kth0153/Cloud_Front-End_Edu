@@ -8,13 +8,13 @@
     <script>
         var sum=0;
         const cmd_1 = function(n) {
-            sum = n + 5;
+            sum = n + 5; // 전역변수
             cmd_2(5); //함수 cmd-1호출
         }
 
         const cmd_2 = function(num) {
             sum += num;
-            console.log("num : " + num + ", sum : " + sum);
+            console.log("num : " + num + ", sum : " + sum); // num : 5 ,sum : 20
         }
 
         cmd_1(10); //함수 cmd-1호출

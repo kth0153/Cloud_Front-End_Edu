@@ -7,11 +7,53 @@
     <title>Document</title>
 
     <script>
-        //------------------------charAt()--------------------------
+         /* #################################################
+           [이스케이프 문자]
+            \'      작은 따옴표                 \"      큰 따옴표
+            \\      역슬래시                    \n      새로운 라인
+            \r      캐리지 리턴                 \t      탭
+            \b      역행 키이                   \f      용지 공급
+        ################################################# */
+        var str = "\"산토끼\" 토끼야 어디를 가느냐?\r\n\'깡총깡총\' 뛰면서 어디를 가느냐?";
+        console.log(str); 
+        // "산토끼" 토끼야 어디를 가느냐?
+        // '깡총깡총' 뛰면서 어디를 가느냐?
+
+        /* #####################################################
+            [ 형식 ]
+            int str.length
+        ================================================
+            - 설명 : 문자열 str의 길이를 반환
+            - return : int
+        ###################################################### */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐?";
+        var result = str.length;
+        console.log(result);
+
+        //------------------------charAt() : 지정된 위치에 있는 문자 반환--------------------------
         var jumin = "123456-1bcdefg";
         var msg = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐?";
         // var ch = jumin.charAt(6); // 해당 인덱스 위치의 값을 하나 추출
         // console.log(ch);
+
+        /* #################################################
+            문자열에서 지정된 위치에 있는 문자 반환 :  문자나 문자 코드를 반환합니다.
+            - charAt() : 지정된 위치에 있는 문자 반환
+            - charCodeAt() : 주어진 인덱스에 대한 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 반환
+            - charPointAt() : 주어진 인덱스에 대한 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 반환 
+           ===========================================
+            - 형식 :  char str.cahrAt(index) / int str.charCodeAt(index) / int str.charPointAt(index)
+            - str : 문자열
+            - index : 반환할 문자의 위치
+            - return : Char
+        ################################################# */
+        var str = "Hare rabbit, where are you going? Where are you going while running?";
+        var resutl1, resutl2, resutl3;
+
+        var result1 = str.charAt(6); // 변수 str에서 6번째 위치한 문자 반환 ==> a
+        var result2 = str.charCodeAt(6); // 변수 str에서 6번째 위치한 문자(a) UTF-16반환 ==> 97
+        var result3 = str.codePointAt(7); // 변수 str에서 7번째 위치한 문자(b) UTF-16 코드 ==> 98
+        console.log(result1, result2, result3); // "끼"를 콘솔에 출력
 
         //------------------------indexOf()--------------------------
         var num = msg.indexOf("토끼1"); // 해당 인덱스 위치 값 추출, 찾는 문자열이 몇번째 문자열인지 정수값 반환 / 시작 인덱스는 항상 0부터, 해당 문자가 없는 경우 -1 출력
@@ -20,6 +62,23 @@
         //------------------------lastIndexOf()--------------------------
         var num1 = msg.lastIndexOf("토끼"); // 오른쪽에서 왼쪽으로 찾는 문자열이 몇번째 문자열인지 정수값 반환
         console.log(num1);
+
+        /* #####################################################
+            String slice(int start_index, int end_index)
+            String substring(int start_index, int end_index)
+            String substr(int start_index, int length)
+            ==============================================
+            - str: 문자열
+            - start_index : 반환 할 문자열의 시작위치
+            - end_index  : end_index 이전까지의 문자열
+            - length : 문자열의 길이(개수)
+            - 반환 값: String 또는 빈 문자열
+        ###################################################### */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐";
+        var result1 = str.slice(-16, -12); // str의 17번째 문자인 “깡”부터 (21-1)번째 글자인 “총”까지 반환
+        var result2 = str.substring(17, 21); // str의 17번째 문자인 “깡”부터 (21-1)번째 글자인 “총”까지 반환
+        var result3 = str.substr(17, 4); // str의 17번째 문자인 “깡”부터 (21-1)번째 글자인 “총”까지 반환
+        console.log("a:"+result1, "b:"+result2, "c:"+result3); // "깡총깡총"을 콘솔에 출력
 
         //------------------------substring()--------------------------
         var str = jumin.substring(7); // 문자열 추출, 뒤에 작성되는 인덱스 번호 -1 까지 추출, 뒤에 번호가 입력되지 않으면 앞에 번호 뒤 모든 값 출력
@@ -86,6 +145,34 @@
         var message = replaceAll_1(msg,"토끼","거북이"); // 함수내 무조건 리턴값이 있어야함
         console.log(message);
 
+        /* #####################################################
+            - 형식 : String str.toLowerCase()  |  String  str.toUpperCase()
+        ================================================
+            - 설명 : str의 모든 영문자를 소분자 또는 대문자로 변환.
+            - str : 문자열
+            - String : 반환 문자열
+        ###################################################### */
+        var str = "Hare rabbit, where are you going? Where are you going while running?";
+        var result1 = str.toLowerCase(); // 대문자 -> 소문자 hare rabbit, where are you going? where are you going while running?
+        var result2 = str.toUpperCase(); // 소문자 -> 대문자 HARE RABBIT, WHERE ARE YOU GOING? WHERE ARE YOU GOING WHILE RUNNING?
+        console.log(result1);
+        console.log(result2);
+
+               /* #####################################################
+            [ 형식 ]
+            Array str.split([string])
+        ================================================
+            - 설명 : str을 지정된 string를 기준으로 배열화 함
+            - string : 기준 문자열
+            - return : Array
+        ###################################################### */
+        var str = "메론, 수박, 자두, 포도, 자몽, 사과, 복숭아";
+        var arr = str.split(", "); 
+        console.log(arr);
+        // 
+        //------------------- 참고 : String arr.join() -----------------------------------
+        str = arr.join("|");
+        console.log(str);
     </script>
 
 

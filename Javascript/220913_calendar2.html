@@ -40,21 +40,21 @@
         console.log(nextMonth);
 
         //-------------------이번달 1일--------------------------
-        nowDate = new Date(nowYear,nowMonth,1);
-        var weekNum = nowDate.getDay();
+        nowDate = new Date(nowYear,nowMonth,1); // 이번달 1일
+        var weekNum = nowDate.getDay(); // 이번달 1일의 요일
         console.log(weekNum);
 
-        var day = 1 - weekNum; // 1-4=-3 / 1-2=-1 
+        var day = 1 - weekNum; // 1-4=-3 (28,29,30,31) / 1-2=-1 (1)
         document.write("<table border=1>");
-        var prtMonth = nowMonth;
+        var prtMonth = nowMonth; // 현재 달
          while(prtMonth<nextMonth){ // row
             document.write("<tr>");
-            for(i=0;i<7;i++){ // 일~토 까지 1주
+            for(i=0;i<7;i++){ // 일(0)~토(6) 까지 1주
                 prtDate = new Date(nowYear,nowMonth,day);
                 prtMonth = prtDate.getMonth(); // 캘린더에 출력해줄 날짜 객체의 월 반환
-                if(nowMonth==prtMonth){ // 이전 및 다음달 이면(이번달이 아니라면)
+                if(nowMonth==prtMonth){ 
                     document.write("<td>"+prtDate.getDate()+"</td>");
-                }else{
+                }else{ // 이전 및 다음달 이면(이번달이 아니라면)
                     // document.write("<td>&nbsp;</td>");
                     document.write("<td class='notEq'>"+prtDate.getDate()+"</td>"); // 이전달 다음달 값 출력
                 }

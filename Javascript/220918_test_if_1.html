@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var kor=80;
+        var eng=70;
+        var mat=90;
+        var tot, avg;
+        var msg = "";
+
+        tot = kor+eng+mat;
+        avg = tot/3;
+        if(avg>=80){
+            msg = "우수학생";
+        }
+        console.log(msg+ " 한 학생입니다.");
+
+        console.log("---------------------------------------------------");
+        function cmdCal(kor, eng, mat){
+            var tot = kor+eng+mat;
+            var Avg = tot/3;
+            return Avg;
+        }
+
+        function ctrFun(avg) {
+            var Avg = 0;
+            if(!avg){
+                Avg = cmdCal(80,80,80);
+                if(Avg>=80){
+                    prtMsg2();
+                }else{
+                    prtMsg1();
+                }
+            }
+        }
+
+        function prtMsg1() {
+            console.log(" 한 학생입니다.")
+        }
+
+        function prtMsg2() {
+            console.log(" 우수한 학생입니다.")
+        }
+
+        ctrFun();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

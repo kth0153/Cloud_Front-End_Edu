@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        p{
+            padding:5px; width:100px; text-align:center;
+            border:1px solid #cccccc ; margin:1px;background-color:#ffffff;
+        }
+        .tit {background-color:#efefef;}
+    </style>
+    <script>
+        var dan = prompt("구구단을 입력하세요");
+        document.write("<p class='tit'>"+dan+"단</p>");
+        for(i=1;i<=9;i++){
+            document.write("<p>"+(dan*i)+" = "+dan+" X "+i+"</p>");
+        }
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -7,6 +7,20 @@
     <title>Json 기본</title>
 
     <script>
+         //----------------기본 형식 -----------------------
+        var keyName = ["num","name","hp"];
+        var jsonDate = {
+            "num" : 1,
+            "name" : "김길",
+            "hp" : "123321312"
+        }
+        var tel = jsonDate[keyName[2]];
+        console.log(jsonDate.num,jsonDate["name"],tel);
+
+        for(i=0;i<keyName.length;i++){
+            console.log(jsonDate[keyName[i]]);
+        }
+
         // var keyName = ["num","name","hp"];
         var keyName = ["list1","list2","list3"];
         var jsonData = {

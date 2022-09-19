@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      var array = ["홍길동","이순신","김유신","허균"];
+    var str = array.join(","); // 배열값에 원하는 문자 포함 시킴, 결과값 : 홍길동,이순신,김유신,허균
+    console.log(str);
+
+    var arr_s = str.split(","); // char 기준으로 문자열 나눔, 결과값 : ['홍길동', '이순신', '김유신', '허균']
+    console.log(arr_s);
+
+    var msg = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐?";
+    var arr_s = msg.split("토끼"); //'산', ' ', '야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐?'
+    console.log(arr_s);
+    var str = arr_s.join("거북이"); // 산거북이 거북이야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐?
+    console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
