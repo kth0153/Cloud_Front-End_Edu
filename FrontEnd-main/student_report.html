@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document_write</title>
+    <style type="text/css">
+        td {
+            /* display: inline-block; */
+            border: 1px solid #cccccc;
+            background-color: #ffffff;
+            padding: 10px;
+            width: 50px;
+            margin: 2px;
+            text-align: center;
+        }
+
+        .target {
+            background-color: #efefef;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+    document.write("<table>");
+    document.write("<tr>");    
+    for(var i=2; i<=9; i++){
+        document.write("<td>");
+        document.writeln("<span class ='target'>" + i + "단</span><br>");
+        for(var j=1; j<10; j++){
+            document.write("<span>"+ i + "x" + j + "=" + i*j +"</span><br>");       
+        }
+        document.write("</td>");
+    }
+    document.write("</tr>");  
+    document.write("</table>");  
+    </script>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>김재훈B</td>
+                <td>고태훈</td>
+                <td>이현정</td>
+                <td>여준영</td>
+                <td>강형구</td>
+            </tr>
+            <tr>
+                <td>황민영</td>
+                <td>김준석</td>
+                <td>최영훈</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

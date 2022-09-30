@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수내에서 선언되지 않은 변수의 성격 : 전역변수</title>
+    <script>
+        //var sum=0;
+        const cmd_1 = function() {
+            var num=5;
+            sum = num + 7;
+            console.log("num : " + num + ", sum : " + sum);
+        }
+
+        const cmd_2 = function() {
+            console.log("sum : " + sum); //sum(?)
+        }
+
+        cmd_1(); //함수 cmd_1호출
+        cmd_2(); //함수 cmd_1호출
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

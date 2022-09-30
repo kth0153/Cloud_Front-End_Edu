@@ -1,0 +1,42 @@
+$.ajax({
+    url: "board_data.json",
+    data:{
+        idx:1,
+        name:"홍길동",
+        title:"게시판에 작성할 제목입니다.",
+        date:"2022-09-14",
+        hit:1
+    },
+    method:"GET",
+    dataType: "text",/*json / text / html / xml / csv */
+    success : function(data) {
+        jsonList=JSON.parse(data);
+        console.log(jsonList[0].title);
+    },
+    error:function(request,status,error){
+            console.log("code:"+request.status);
+            console.log("message:"+request.responseText);
+            console.log("error:"+error);}});
+    });
+================================
+$.ajax({
+    url: "board_data.json",
+    data:{
+        idx:1,
+        name:"홍길동",
+        title:"게시판에 작성할 제목입니다.",
+        date:"2022-09-14",
+        hit:1
+    },
+    method:"GET",
+    dataType: "text",
+    success : function(data) {
+        jsonList=JSON.parse(data);
+        console.log(jsonList[0].title);
+    },
+    error:function(request,status,error){
+            console.log("code:"+request.status);
+            console.log("message:"+request.responseText);
+            console.log("error:"+error);}});
+    });
+====================================

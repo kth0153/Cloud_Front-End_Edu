@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for()문 응용예제 다중반복문</title>
+    <style type="text/css">
+        table { /* table 태그에만 적용 */
+            border-collapse: collapse;     /* 셀과 셀사이의 간격을 없애 준다.*/
+            margin-bottom:30px;          /* margin : 바깥쪽 여백 */
+            border:3px solid #ccc;     /* 선 : 선두께  선모양  선색 */
+            background-color : #fff;   /* 배경색 */
+        }
+        table * {
+            border:1px solid #ccc;
+            padding:5px;
+            text-align: center;
+        }
+        table>caption {
+            border-color:black; background-color:black;
+            color:white; font-weight:bold; padding:5px;
+        }
+        th { 
+            background-color:#efefef; 
+            width:100px;
+        }
+    </style>
+    <script>
+        //============= 1안 =============================================
+        // 안쪽 for()문을 바깥쪽 i변수값으로 제어
+        document.write("<table><caption>구구단</caption>");
+        for(i=0;i<=9;i++) {
+            document.write("<tr>");
+            if(i==0) for(m=2;m<=9;m++) document.write("<th>"+m+"단</th>");
+            else for(j=2;j<10 ; j++)  document.write("<td>"+j+" X "+i+" = "+(i*j)+"</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        //============= e : 1안 ==========================-=================
+
+        //============= 2안 =============================================
+        // 첫행을 우선 for()문을 통해 만들어 줌.
+        document.write("<table><caption>구구단</caption>");
+        document.write("<thead><tr>");
+        for(i=2;i<=9;i++) document.write("<th>"+i+"단</th>");
+        document.write("</tr></thead>");
+        
+        for(i=1;i<=9;i++) {
+            document.write("<tr>");
+            for(j=2;j<10 ; j++)  document.write("<td>"+j+" X "+i+" = "+(i*j)+"</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        //============= e : 2안 ==========================-=================
+        
+        //============= 3안 =============================================
+        // 첫행을 우선 for()문을 통해 만들어 줌.
+        document.write("<table><caption>구구단</caption>");
+        for(i=1;i<=9;i++) {
+            document.write("<tr>");
+            for(j=2;j<10 ; j++)  {
+                if(i==1) document.write("<th>"+j+"단</th>");
+                else document.write("<td>"+j+" X "+i+" = "+(i*j)+"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        //============= e : 3안 ==========================-=================
+    </script>
+</head>
+<body>
+    <table>
+        <caption>구구단</caption>
+        <colgroup>
+            <col /><col /><col /><col />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>2단</th><th>3단</th><th>4단</th><th>5단</th><th>6단</th><th>7단</th><th>8단</th><th>9단</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                for(i=1;i<=9;i++) {
+                    document.write("<tr>");
+                    for(j=2;j<10 ; j++)  document.write("<td>"+j+" X "+i+" = "+(i*j)+"</td>");
+                    document.write("</tr>");
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while()문 응용예제 다중반복문</title>
+    <style type="text/css">
+        table { /* table 태그에만 적용 */
+            border-collapse: collapse;     /* 셀과 셀사이의 간격을 없애 준다.*/
+            margin-bottom:30px;          /* margin : 바깥쪽 여백 */
+            border:3px solid rgb(135, 152, 245);     /* 선 : 선두께  선모양  선색 */
+            background-color : #fff;   /* 배경색 */
+        }
+        table * {
+            border:1px solid rgb(135, 152, 245);
+            padding:5px;
+            text-align: center;
+        }
+        table>caption {
+            background-color:rgb(98, 124, 243);
+            color:white; font-weight:bold; padding:5px;
+        }
+        th { 
+            background-color:#93acf5; 
+            width:100px;
+        }
+    </style>
+    <script>
+        //============= for()문으로 구구단 구현 =============================================
+        document.write("<table><caption>구구단</caption>");
+        for(i=0;i<=9;i++) {
+            document.write("<tr>");
+            if(i==0) for(m=2;m<=9;m++) document.write("<th>"+m+"단</th>");
+            else for(j=2;j<10 ; j++)  document.write("<td>"+j+" X "+i+" = "+(i*j)+"</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        //============= e:for()문으로 구구단 구현 ===========================================
+        //============= while()문으로 구구단 구현 =============================================
+        var i=1; //위 바깥쪽 for()문의 초기값
+        var j; //안쪽 for()문에 사용 할 변수 설정
+        document.write("<table><caption>구구단</caption>");
+        while(i<=9) {
+            document.write("<tr>");
+            j=2; //아래 while()문에 사용될 변수의 초기화
+            do {
+                if(i==1) document.write("<th>"+j+"단</th>");
+                else document.write("<td>"+j+" X "+i+" = "+(i*j)+"</td>");
+                j++; //조건을 거짓으로 만들기 위해 조건에 사용된 변수값 증가
+            } while(j<10) ;
+            document.write("</tr>");
+            i++; //조건을 거짓으로 만들기 위해 조건에 사용된 변수값 증가
+        }
+        document.write("</table>");
+        //============= e:for()문으로 구구단 구현 ===========================================
+    </script>
+</head>
+<body>
+
+</body>
+</html>

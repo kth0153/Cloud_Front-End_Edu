@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method : replace(), replaceAll()</title>
+    <script>
+        /* #####################################################
+            [ 형식 ]
+            String str.replace(string str1, string str2)
+            String str1, string str2String  str.replaceAll()
+        ================================================
+            - 설명 : str의 모든 영문자를 소분자 또는 대문자로 변환.
+            - str1 : 찾는 문자열
+            - str2 : 바꿀 문자열
+            - String : 반환 문자열
+        ###################################################### */
+        var str = "산토끼 토끼야 어디를 가느냐? 깡총깡총 뛰면서 어디를 가느냐";
+        var result1 = str.replace("토끼", "거북이");  //처음 만난 토끼만 바꿈
+        var result2 = str.replaceAll("토끼", "거북이"); //모두 바꿈
+        console.log(result1);
+        console.log(result2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

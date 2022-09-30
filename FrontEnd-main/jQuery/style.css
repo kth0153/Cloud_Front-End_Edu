@@ -1,0 +1,51 @@
+@import url("reset.css");
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+/*-------------------------------------------------------*/
+html * {
+    font-family: 'NanumSquare', sans-serif;
+    color:#222;
+}
+a:active, a:link, a:hover {color:#222;text-decoration: none;}
+table { width:100%; }
+table caption {
+    position: absolute;
+    visibility: hidden;
+}
+col:nth-child(1) {width:35px;}
+col:nth-child(2) {width:5%; min-width:70px;}
+col:nth-child(3) {width:auto;}
+col:nth-child(4) {width:10%; min-width:100px;}
+col:nth-child(5) {width:5%; min-width:70px;}
+col:nth-child(6) {width:10%; min-width:120px;}
+col:nth-child(7) {width:5%; min-width:70px;}
+table, th, td {
+    border: 1px solid #ccc;
+}
+tr:nth-child(even) {
+    background-color: #efefef;
+}
+th, td {
+    padding: 0.5rem;
+    text-align: center;
+}
+th {
+    background-color:#000f;
+    color:#fff;
+}
+tr td:nth-child(3) {text-align: justify;}
+tbody tr td:last-child span:hover {color:red;cursor: pointer;}
+tfoot {background-color:#000;color:#fff;text-align:center;}
+tfoot span {color:#fff;}
+tfoot span:hover {
+    color:#f00;
+    cursor: pointer;
+}
+h1 {
+    padding : 10px;
+}
+/* =========== id 설정부 ==================*/
+#container {
+    min-width:960px; 100%;
+    margin:0px auto;
+    position:relative;
+}

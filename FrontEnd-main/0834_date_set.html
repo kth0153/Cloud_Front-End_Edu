@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체 메서드 : 날자 재지정하기</title>
+    <script>
+        var nowDate = new Date(); //현재의 날자 및 시간을 반환
+
+        nowDate.setFullYear(2021);
+        nowDate.setMonth(9);
+        nowDate.setDate(5);
+
+        nowDate.setHours(13);
+        nowDate.setMinutes(10);
+        nowDate.setSeconds(30);
+        nowDate.setMilliseconds(2000);
+
+        //nowDate.setTime();
+
+        console.log(nowDate.toString());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

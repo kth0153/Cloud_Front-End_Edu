@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for / in문 실습예제</title>
+    <script>
+        var arr = [3, 4, 5]; //배열, arr[0]=3; arr[1]=4, arr[2]=5;
+        var arrCnt = arr.length; //배열명.length는 배역방의 갯수를 반환하는 속성.
+        for (var i = 0; i < arrCnt; i++) { // 배열 arr의 모든 요소의 인덱스(index)를 출력함.
+            document.write(i + " ");
+        }
+        document.write("<br />");//구분을 위해 줄을 바꿔줌
+        //위 for()문을 for / in 문으로 변환
+        for (var i in arr) {
+            document.write(i + " ");
+        }
+        document.write(arr+"<br />");
+        //객체반복
+        var obj = { a: 1, b: 2, c: 3 };
+        for (var prop in obj) {
+            console.log(prop, obj[prop], 't'); // a 1, b 2, c 3
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

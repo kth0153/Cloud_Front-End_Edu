@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체 메서드 : 날자 가져오기</title>
+    <script>
+        var nowDate = new Date(); //현재의 날자 및 시간을 반환
+        var nowYear = nowDate.getFullYear(); //YYYY로 반환
+        var nowMonth = nowDate.getMonth()+1; //월-1 반환
+        var nowDay= nowDate.getDate(); //일자
+        var weekNum = nowDate.getDay();//일요일(0) ~ 토요일(6)
+        
+        var nowHour = nowDate.getHours();
+        var nowMinute = nowDate.getMinutes();
+        var nowSecond = nowDate.getSeconds();
+
+        var strDate = nowYear+ "년 " + nowMonth + "월 " + nowDay + "일 " ;
+        var strTime = nowHour+ ":" + nowMinute + ":" + nowSecond;
+        console.log(strDate, strTime);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

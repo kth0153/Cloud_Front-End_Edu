@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수값 반환(return)</title>
+    <script>
+        var cmd1;
+        const cmd_1 = function(n) {
+            var sum;
+            sum = n + 5;
+            return sum;
+        }
+
+        const cmd_2 = function(num) {
+            var sum=10;
+            sum += num;
+            console.log("num : " + num + ", sum : " + sum);
+        }
+
+        num1=cmd_1(10); //함수 cmd-cmd-1호출
+        cmd_2(num1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

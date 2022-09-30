@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        /*주석 아래와 동일
+        var arr = new Array(3);
+        arr[0] = 1;
+        arr[1] = "홍길동";
+        arr[2] = "남자";
+        */
+        //var arr = new Array(1, '홍길동', '남자'); //아래와 동일
+        var arr = [1, '홍길동', '남자'];
+        var arrLen = arr.length; //배열의 길이를 반환 받아 변수에 저장
+        console.log(arrLen);
+        
+        var arrChk = Array.isArray(arr); //소괄호 안에 지정된 것이 배열인지 반환(true/false)
+        console.log(arrChk);
+
+        var arr1 = ['pear', 'berry', 'apple', 'banana', 'kiwi'];
+        var arr2 = [9, 7, 5, 3];
+        var merArr = arr1.concat(arr2);
+        //console.log(merArr);
+
+
+        var fruits = ['apple', 'banana', 'kiwi', 'melon'];
+        for (let i = 0; i < fruits.length; i++) {
+            //console.log(fruits[i]);
+        }
+
+        for (idx in fruits) {
+            console.log(idx);
+        }
+
+        for (let fruit of fruits) {
+            //console.log(fruit);
+        }
+
+        fruits.forEach(function (val, idx, array) {//값, 인덱스, 배열 을 반환 여기서 배열은 의미 없음.
+            //console.log(val, idx, array);
+        });
+
+        //fruits.forEach((val, idx) => console.log(val, idx));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

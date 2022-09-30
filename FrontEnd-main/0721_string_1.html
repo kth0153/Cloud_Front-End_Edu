@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method : charAt()</title>
+    <script>
+        /* #################################################
+            문자열에서 지정된 위치에 있는 문자 반환 :  문자나 문자 코드를 반환합니다.
+            - charAt() : 지정된 위치에 있는 문자 반혼
+            - charCodeAt() : 주어진 인덱스에 대한 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 반환
+            - charPointAt() : 주어진 인덱스에 대한 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 반환
+            ===========================================
+            - 형식 :  char str.cahrAt(index) / int str.charCodeAt(index) / int str.charPointAt(index)
+            - str : 문자열
+            - index : 반환할 문자의 위치
+            - return : Char
+        ################################################# */
+        var str = "Hare rabbit, where are you going? Where are you going while running?";
+        var resutl1, resutl2, resutl3;
+
+        var result1 = str.charAt(6); // 변수 str에서 6번째 위치한 문자 반환 ==> a
+        var result2 = str.charCodeAt(6); // 변수 str에서 6번째 위치한 문자(a) UTF-16반환 ==> 97
+        var result3 = str.codePointAt(7); // 변수 str에서 7번째 위치한 문자(b) UTF-16 코드 ==> 98
+        console.log(result1, result2, result3); // "끼"를 콘솔에 출력
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
